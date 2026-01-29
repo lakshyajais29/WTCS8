@@ -12,7 +12,7 @@ const show = () => {
 }
 show();
 // arrow function surrounding se values leta hai
-// iske pass apna this nahi hota hai surrounging se this hota hai
+// iske pass apna this nahi hota hai surrounging se this leta hai
 // normal function ke pass apna this hota hai
 // arrow function ke pass arguments nahi hota hai
 function person() {
