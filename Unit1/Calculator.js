@@ -55,7 +55,7 @@ r1.question("Enter oper: ", (oper) => {
     else if (oper == "div") {
         console.log(cal().div(10, 20));
     }
-    r1.close();
+    r1.close(); d
 })
 
 
