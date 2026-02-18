@@ -16,12 +16,32 @@
 // }, 2000); // setTimeout is an asynchronous function and it will execute the aa function after 2 seconds 
 
 //  2nd asysnchronous opertion
-let count = 0;
-let aa = setInterval(() => {
-    console.log("1 sec delay....")
-    console.log("fifth");
-    if (count == 5){
-        clearInterval(aa); // clearInterval is used to stop the setInterval function
-    }
-    count++;
-}, 1000); // setInterval is an asynchronous function and it will execute the aa function every 1 second
+// let count = 0;
+// let aa = setInterval(() => {
+//     console.log("1 sec delay....")
+//     console.log("fifth");
+//     if (count == 5){
+//         clearInterval(aa); // clearInterval is used to stop the setInterval function
+//     }
+//     count++;
+// }, 1000); // setInterval is an asynchronous function and it will execute the aa function every 1 second
+
+function roll(num , next, delay){
+    setTimeout(() => {  
+        console.log("roll no. is: " + num);
+        if (next) next();
+    }, delay);
+    
+}
+// callback hell is a situation where we have multiple nested callback functions
+
+roll(12212 , () => {
+    console.log("wait next function is called");
+    roll(12213 , () => {
+        console.log("wait next function is called");
+        roll(12214 , () => {
+            console.log("wait next function is called");
+            roll(12215);
+        } , 5000);
+    },3000);
+}, 1000);
